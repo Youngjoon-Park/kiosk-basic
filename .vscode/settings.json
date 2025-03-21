@@ -1,5 +1,10 @@
 {
-  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.project.sourcePaths": ["src/main/java"],
+  "java.completion.enabled": true,
+  "java.project.outputPath": "bin",
+  "java.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.14.7-hotspot",
   "java.compile.nullAnalysis.mode": "automatic",
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
+
+  // 자동 빌드 설정 비활성화
+  "java.configuration.updateBuildConfiguration": "disabled"
 }

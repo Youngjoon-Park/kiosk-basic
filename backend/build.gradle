@@ -1,0 +1,53 @@
+plugins {
+    id 'org.springframework.boot' version '3.2.2'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()  // Maven Central repository 추가
+}
+
+dependencies {
+    // Spring Boot 핵심 스타터 설정
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // MySQL Connector 의존성 추가
+    implementation 'mysql:mysql-connector-java:8.0.27'
+
+    // Spring Data JPA 의존성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Spring Web MVC 버전 맞추기
+    implementation 'org.springframework:spring-webmvc:6.0.1'
+
+    // Spring Web 버전 맞추기
+    implementation 'org.springframework:spring-web:6.0.1'
+
+    // Spring Security 버전 맞추기
+    implementation 'org.springframework.security:spring-security-config:6.0.1'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+
+    // 테스트 설정
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
